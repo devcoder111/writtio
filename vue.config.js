@@ -2,8 +2,8 @@ const webpack = require("webpack");
 
 module.exports = {
   devServer: {
-    host: "writtio.local",
-    // host: "localhost",
+    // host: "writtio.local",
+    host: "localhost",
     https: true,
     hot: true,
     disableHostCheck: true

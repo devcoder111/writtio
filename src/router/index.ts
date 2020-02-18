@@ -29,6 +29,8 @@ const WizardSuccess = () =>
   import(/* webpackChunkName: 'wizard' */ "@/views/Wizard/Success.vue");
 const WizardError = () =>
   import(/* webpackChunkName: 'wizard' */ "@/views/Wizard/Error.vue");
+const Dashboard = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Dashboard.vue");
 
 Vue.use(Router);
 
@@ -87,6 +89,10 @@ const router = new Router({
           ]
         }
       ]
+    },
+    {
+      path: "/dashboard",
+      component: Dashboard
     },
     {
       path: "*",
