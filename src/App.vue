@@ -4,6 +4,8 @@
   </div>
 </template>
 
+
+
 <style>
 html,
 body,
@@ -12,10 +14,12 @@ body,
 }
 
 body {
-  font-family: "Oxygen", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   margin: 0 !important;
   padding: 0 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 </style>
+
+

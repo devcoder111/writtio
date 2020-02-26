@@ -29,6 +29,16 @@ const WizardSuccess = () =>
   import(/* webpackChunkName: 'wizard' */ "@/views/Wizard/Success.vue");
 const WizardError = () =>
   import(/* webpackChunkName: 'wizard' */ "@/views/Wizard/Error.vue");
+const Dashboard = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Dashboard.vue");
+const AllPost = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/AllPost.vue");
+const Writing = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Writing.vue");
+const Performance = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Performance.vue");
+const Maintenance = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Maintenance.vue");
 
 Vue.use(Router);
 
@@ -55,7 +65,7 @@ const router = new Router({
         {
           path: "sign-up",
           component: SignUp
-        },
+        },    
         {
           path: "/wizard",
           component: Wizard,
@@ -87,6 +97,30 @@ const router = new Router({
           ]
         }
       ]
+    },
+    // {
+    //   path: "/dashboard",
+    //   component: Dashboard
+    // },
+    {
+      path: "/guidelines",
+      component: Dashboard
+    },
+    {
+      path: "/allposts",
+      component: AllPost
+    },
+    {
+      path: "/writing",
+      component: Writing
+    },
+    {
+      path: "/performance",
+      component: Performance
+    },
+    {
+      path: "/maintenance",
+      component: Maintenance
     },
     {
       path: "*",

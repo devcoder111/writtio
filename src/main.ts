@@ -3,6 +3,9 @@ import "./plugins/";
 import App from "./App.vue";
 import router from "./router/";
 import store from "./store/";
+import VueTour from "vue-tour";
+
+Vue.use(VueTour);
 
 Vue.config.productionTip = false;
 

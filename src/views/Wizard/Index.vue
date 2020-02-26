@@ -231,7 +231,7 @@ export default {
     .step > .label {
       font-size: 22px;
       font-weight: bold;
-      font-family: "Oxygen";
+      font-family: "Poppins";
       color: #fff;
     }
 
