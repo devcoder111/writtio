@@ -39,6 +39,8 @@ const Performance = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/Performance.vue");
 const Maintenance = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/Maintenance.vue");
+const Users = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Users.vue");
 
 Vue.use(Router);
 
@@ -65,7 +67,7 @@ const router = new Router({
         {
           path: "sign-up",
           component: SignUp
-        },    
+        },
         {
           path: "/wizard",
           component: Wizard,
@@ -117,6 +119,10 @@ const router = new Router({
     {
       path: "/performance",
       component: Performance
+    },
+    {
+      path: "/users",
+      component: Users
     },
     {
       path: "/maintenance",
