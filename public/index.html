@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>dashboard</title>
   </head>
@@ -22,7 +24,7 @@
         color: black;
         border:rgba(102, 102, 102, 0.5) solid 1px;
         border-radius: 3px;
-        // height: 30px;
+        /* height: 30px; */
       }
     .el-input__inner {
       background: #eeeeee !important;
@@ -36,5 +38,10 @@
     .el-input--suffix > span{
       width: 42px !important;
     }
+    @media screen and (max-width: 1350px) {
+      .logo-wrapper.el-col.el-col-15 {
+        width: 55.5%;
+    }
+  }
   </style>
 </html>
