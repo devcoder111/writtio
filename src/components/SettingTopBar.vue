@@ -7,15 +7,9 @@
   >
     <el-row>
       <el-col class="options" :span="4">
-          <el-menu-item index="1">
-            <!-- <i class="el-icon-document-copy"></i> -->
-            <img src="@/assets/icon/asset-blogs.svg" class="iconSvg" >
-          </el-menu-item>
-          <el-menu-item index="2">
-            <!-- <i class="el-icon-document-add"></i> -->
-            <img src="@/assets/icon/asset-new blog.svg" class="iconSvg">
-          </el-menu-item>
-        
+        <div class="backTo">
+        <a href="/dashboard"> <i class="el-icon-arrow-left"></i> Back to DashBoard</a>
+        </div>
       </el-col>
       <el-col class="logo-wrapper" :span="15">
         
@@ -101,6 +95,15 @@
 <style lang="scss" scoped>
 .el-row{
   outline: none;
+}
+.backTo{
+  margin:auto;
+  font-weight: bold;
+}
+.backTo a {
+  text-decoration: none;
+  color : #666666;
+  font-size: 18px;
 }
 .icon-setting{
   text-decoration: none;

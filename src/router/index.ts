@@ -39,7 +39,10 @@ const Performance = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/Performance.vue");
 const Maintenance = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/Maintenance.vue");
-
+const Users = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Users.vue");
+const ProfileSettings = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Settings/ProfileSettings.vue");
 Vue.use(Router);
 
 const router = new Router({
@@ -121,6 +124,14 @@ const router = new Router({
     {
       path: "/maintenance",
       component: Maintenance
+    },
+    {
+      path: "/users",
+      component: Users
+    },
+    {
+      path: "/profileSettings",
+      component: ProfileSettings
     },
     {
       path: "*",
