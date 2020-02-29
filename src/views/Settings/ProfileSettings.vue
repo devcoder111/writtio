@@ -1,40 +1,52 @@
 <template>
   <el-container>
     <el-header height="70px">
-      <TopBar />
+      <SettingTopBar />
     </el-header>
     <el-container>
-      <el-aside width="auto">
-        <h5 class="heading-blog">My First Blog</h5>
-        <SideBar />
-        <div class="upgrade-button">
-          <p class="free-account">FREE ACCOUNT</p>
-          <el-button plain @click="$router.push('maintenance')">UPGRADE</el-button>
-
+      <el-aside width="340px">
+        <div class="userImage">
+          <img  src="@/assets/avata.png" />
         </div>
+        <div class="username">
+          <p>Sample User</p>
+        </div>
+        <SettingSideBar />
       </el-aside>
       <el-main>
-        <users-content />
+        <!-- <writing-content /> -->
       </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
-import SideBar from "@/components/SideBar";
-import TopBar from "@/components/TopBar";
-import UsersContent from "@/components/UsersContent/";
+import SettingSideBar from "@/components/SettingSideBar";
+import SettingTopBar from "@/components/SettingTopBar";
+import WritingContent from "@/components/WritingContent";
 
 export default {
   components: {
-    SideBar,
-    TopBar,
-    UsersContent
+    SettingSideBar,
+    SettingTopBar,
+    WritingContent
   }
 };
 </script>
 
 <style lang="scss">
+.userImage{
+  padding-top:50px;
+  margin:auto;
+  img{
+    width: 221px ;
+    height: 221px ;
+     margin: auto;
+    display: inherit;
+
+  }
+}
+
 .el-header {
   padding: 0;
 }
@@ -55,18 +67,20 @@ export default {
     display: flex;
     background-color: $writtio-primary;
   }
-  .upgrade-button {
+  .username {
     text-align: center;
-    .free-account {
-      font-size: 19px;
+    p {
+      margin-top:40px;
+      font-size: 25px;
       font-family: "Poppins";
       color: rgb(102, 102, 102);
       line-height: 1.2;
+      font-weight: bold;
       margin-bottom: 10px;
     }
     .el-button {
       background-color: $writtio-tertiary;
-      font-size: 19px;
+      font-size: 21px;
       font-family: "Poppins";
       color: #000;
       font-weight: bold;
@@ -75,7 +89,6 @@ export default {
       border: none;
       border-radius: 5px;
     }
-    
   }
 }
 </style>

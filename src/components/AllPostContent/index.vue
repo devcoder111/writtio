@@ -89,6 +89,12 @@ export default {
               title: 'Summary of Engagement',
               format: '1,000'
           },
+          chartExportMenu: {
+            visible: false
+          },
+        legend: {
+              align: 'right'
+          },
       },
 
       columnChartData: {
@@ -127,7 +133,10 @@ export default {
           // },
           legend: {
               align: 'top'
-          }
+          },
+          chartExportMenu: {
+          visible: false
+        },
       },
       Searchbox: "",
       datacollection1: {},

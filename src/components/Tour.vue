@@ -131,6 +131,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
 .menu {
   position: absolute;
   top: 80px;
@@ -140,7 +141,7 @@ export default {
   background: #3092ff !important;
   width: 70%;
   border-radius: 5px !important;
-  padding: 0.4rem !important;
+  padding: 1rem 0 1.8rem 0 !important;
   font-size: 15px !important;
   float: left;
 }
@@ -149,8 +150,11 @@ export default {
   background: #3092ff !important;
   width: 100%;
   border-radius: 5px !important;
-  padding: 0.4rem !important;
+  padding: 1rem 0 1.8rem 0 !important;
   font-size: 15px !important;
   float: left;
+}
+.v-step__button{
+  padding: 1rem 0 1.8rem 0 !important;
 }
 </style>

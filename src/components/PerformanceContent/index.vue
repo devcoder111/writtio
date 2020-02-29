@@ -497,7 +497,14 @@ export default {
         series: {
           spline: true,
           showDot: false
-        }
+        },
+        chartExportMenu: {
+          visible: false
+        },
+        legend: {
+            align: 'top'
+        },
+        
       }
     };
   },
