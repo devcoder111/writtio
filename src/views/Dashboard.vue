@@ -9,8 +9,9 @@
         <SideBar />
         <div class="upgrade-button">
           <p class="free-account">FREE ACCOUNT</p>
-          <el-button plain @click="$router.push('maintenance')">UPGRADE</el-button>
-
+          <el-button plain @click="$router.push('maintenance')"
+            >UPGRADE</el-button
+          >
         </div>
       </el-aside>
       <el-main>
@@ -75,7 +76,6 @@ export default {
       border: none;
       border-radius: 5px;
     }
-    
   }
 }
 </style>

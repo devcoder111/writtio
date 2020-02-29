@@ -1,42 +1,51 @@
 <template>
   <div>
     <div class="head">
-      <h1>{{data.Title}}</h1>
-      <p>Draft {{data.Descripation}}</p>
+      <h1>{{ data.Title }}</h1>
+      <p>Draft {{ data.Descripation }}</p>
       <el-button type="primary">Open Blog</el-button>
     </div>
     <el-divider></el-divider>
     <div class="options">
       <el-button
         type="info"
-        v-bind:class="{ 'el-button--selected': activetab=='Writing Metrics' }"
-        @click="activetab='Writing Metrics'"
-      >Writing Metrics</el-button>
+        v-bind:class="{ 'el-button--selected': activetab == 'Writing Metrics' }"
+        @click="activetab = 'Writing Metrics'"
+        >Writing Metrics</el-button
+      >
       <el-button
         type="info"
-        v-bind:class="{ 'el-button--selected': activetab=='Structure' }"
-        @click="activetab='Structure'"
-      >Structure</el-button>
+        v-bind:class="{ 'el-button--selected': activetab == 'Structure' }"
+        @click="activetab = 'Structure'"
+        >Structure</el-button
+      >
       <el-button
         type="info"
-        v-bind:class="{ 'el-button--selected': activetab=='Taxonomies' }"
-        @click="activetab='Taxonomies'"
-      >Taxonomies</el-button>
+        v-bind:class="{ 'el-button--selected': activetab == 'Taxonomies' }"
+        @click="activetab = 'Taxonomies'"
+        >Taxonomies</el-button
+      >
       <el-button
         type="info"
-        v-bind:class="{ 'el-button--selected': activetab=='Post Interactions' }"
-        @click="activetab='Post Interactions'"
-      >Post Interactions</el-button>
+        v-bind:class="{
+          'el-button--selected': activetab == 'Post Interactions'
+        }"
+        @click="activetab = 'Post Interactions'"
+        >Post Interactions</el-button
+      >
     </div>
     <div class="details">
       <p class="option-title">
-        <b>{{activetab}}</b>
+        <b>{{ activetab }}</b>
       </p>
       <div>
-        <writing-metrics :data="data" v-if="activetab=='Writing Metrics'" />
-        <Structure :data="data" v-if="activetab=='Structure'" />
-        <Taxonomies :data="data" v-if="activetab=='Taxonomies'" />
-        <post-interactions :data="data" v-if="activetab=='Post Interactions'" />
+        <writing-metrics :data="data" v-if="activetab == 'Writing Metrics'" />
+        <Structure :data="data" v-if="activetab == 'Structure'" />
+        <Taxonomies :data="data" v-if="activetab == 'Taxonomies'" />
+        <post-interactions
+          :data="data"
+          v-if="activetab == 'Post Interactions'"
+        />
       </div>
     </div>
   </div>
@@ -65,7 +74,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" >
+<style lang="scss">
 .head {
   padding: 25px;
   padding-bottom: 0px;

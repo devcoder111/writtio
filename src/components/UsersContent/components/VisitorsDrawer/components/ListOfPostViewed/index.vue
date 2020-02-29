@@ -6,17 +6,19 @@
     <div>
       <div v-for="item in data" :key="item.index">
         <el-row class="visitor-post-detail-item">
-          <div class="visitor-post-detail-name">{{item.posttitle}}</div>
-          <div class="visitor-post-detail-datantime">{{item.dateandtime}}</div>
+          <div class="visitor-post-detail-name">{{ item.posttitle }}</div>
+          <div class="visitor-post-detail-datantime">
+            {{ item.dateandtime }}
+          </div>
 
           <div style="display:flex;">
             <el-col class="visitor-post-detail-name">
               Read or Skim:
-              <p>{{item.readorskimm}}</p>
+              <p>{{ item.readorskimm }}</p>
             </el-col>
             <el-col class="visitor-post-detail-data">
               CTA complate:
-              <p>{{item.ctacomplate}}</p>
+              <p>{{ item.ctacomplate }}</p>
             </el-col>
           </div>
         </el-row>

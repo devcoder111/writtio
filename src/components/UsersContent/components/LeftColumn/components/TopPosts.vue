@@ -3,12 +3,15 @@
     <div class="card-title card-pb">
       <h1>Top posts that led to return visits</h1>
     </div>
-    <div class="post-listing" v-for="(item,index) in toppostlist" :key="index">
+    <div class="post-listing" v-for="(item, index) in toppostlist" :key="index">
       <div class="post-list">
-        <h3>{{item.title}}</h3>
+        <h3>{{ item.title }}</h3>
         <div class="right-side">
-          <h3>%{{item.per}}</h3>
-          <img :src="require('@/assets/icon/asset-open.svg')" class="btn-icon" />
+          <h3>%{{ item.per }}</h3>
+          <img
+            :src="require('@/assets/icon/asset-open.svg')"
+            class="btn-icon"
+          />
         </div>
       </div>
       <el-divider></el-divider>

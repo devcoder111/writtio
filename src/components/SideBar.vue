@@ -81,14 +81,14 @@ export default {
           src: require("../assets/icon/asset-topics-gray copy 2.svg"),
           activesrc: require("../assets/icon/asset-guidelines-purple.svg")
         },
-         {
+        {
           title: "Users",
           route: "/users",
           icon: "el-icon-s-grid",
           active: "/users" == this.$route.path,
           src: require("../assets/icon/asset-profile settings-gray.svg"),
           activesrc: require("../assets/icon/asset-profile settings-purple.svg")
-        },
+        }
       ]
     };
   },

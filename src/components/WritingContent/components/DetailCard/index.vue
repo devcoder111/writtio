@@ -1,35 +1,44 @@
 <template>
   <el-row class="detail-cards">
-    <h1 class="detail-main-title">{{boxName}}</h1>
-    <div v-for="(item,index) in data" :key="index">
-      <el-divider class="detail-row-divider" v-if="((data.length-1) == index) == false"></el-divider>
+    <h1 class="detail-main-title">{{ boxName }}</h1>
+    <div v-for="(item, index) in data" :key="index">
+      <el-divider
+        class="detail-row-divider"
+        v-if="(data.length - 1 == index) == false"
+      ></el-divider>
       <div class="detail-row">
         <el-col class="detail-row-left">
           <p class="detail-sub-title">
-            {{item.title}}
+            {{ item.title }}
             <i
               class="el-icon-warning element-item-icon success"
-              v-if="item.icon=='success'"
+              v-if="item.icon == 'success'"
             ></i>
-            <i class="el-icon-warning element-item-icon warning" v-if="item.icon=='warning'"></i>
+            <i
+              class="el-icon-warning element-item-icon warning"
+              v-if="item.icon == 'warning'"
+            ></i>
           </p>
         </el-col>
         <el-col class="detail-row-right">
           <div>
             <p class="light-text">TARGET</p>
-            <p class="dark-text">{{item.target}}</p>
+            <p class="dark-text">{{ item.target }}</p>
           </div>
           <div>
             <p class="light-text">INTEGER</p>
-            <p class="dark-text">{{item.integer}}</p>
+            <p class="dark-text">{{ item.integer }}</p>
           </div>
           <div>
             <p class="light-text">STATUS</p>
-            <p class="dark-text">{{item.status}}</p>
+            <p class="dark-text">{{ item.status }}</p>
           </div>
         </el-col>
       </div>
-      <el-divider class="detail-row-divider" v-if="((data.length-1) == index) == false"></el-divider>
+      <el-divider
+        class="detail-row-divider"
+        v-if="(data.length - 1 == index) == false"
+      ></el-divider>
     </div>
   </el-row>
 </template>

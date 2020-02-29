@@ -5,7 +5,9 @@
         <el-divider class="detail-divider"></el-divider>
         <el-row class="detail-item" style="display:flex;">
           <el-col>
-            <p class="detail-item-title" style="padding-left:50px;">{{item}}</p>
+            <p class="detail-item-title" style="padding-left:50px;">
+              {{ item }}
+            </p>
           </el-col>
         </el-row>
       </div>
@@ -17,7 +19,9 @@
         <el-divider class="detail-divider"></el-divider>
         <el-row class="detail-item" style="display:flex;">
           <el-col>
-            <p class="detail-item-title" style="padding-left:50px;">{{item}}</p>
+            <p class="detail-item-title" style="padding-left:50px;">
+              {{ item }}
+            </p>
           </el-col>
         </el-row>
       </div>

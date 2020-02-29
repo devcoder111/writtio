@@ -3,15 +3,16 @@
     <div>
       <img :src="require('@/assets/writing-content-img.png')" />
       <h1>Calculating...</h1>
-      <p>Hold tight, we're gathering the data we need to tell you which writing patterns impact your performance.</p>
+      <p>
+        Hold tight, we're gathering the data we need to tell you which writing
+        patterns impact your performance.
+      </p>
     </div>
   </div>
 </template>
 
-
 <style lang="scss">
-
-main >:first-child {
+main > :first-child {
   height: 100%;
 }
 

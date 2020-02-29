@@ -4,8 +4,6 @@
   </div>
 </template>
 
-
-
 <style>
 html,
 body,
@@ -21,5 +19,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 </style>
-
-

@@ -1,50 +1,47 @@
 <template>
   <div class="left-card-card">
-    
     <el-row class="block__general block-graph">
-        <el-col :xs="18" :sm="18" :md="24" :lg="24" :xl="24" class="usersPie">
-          <div class="card-title">
-            <h1 >Visitiors who completed a CTA</h1>
-          </div>
-          <pie-chart
-            :data="dataPie"
-            :options="optionsPie"
-            :theme="chartPieTheme1"
-          />
-        </el-col>
-        <div class="block-general__cont-wrap">
-          <div class="block-general__cont">
-            <p class="p-col col-1"></p>
-            <p class="par__general">Returning Visitors</p>
-          </div>
-          <div class="block-general__cont align-end">
-            <p class="per-value-b">36%</p>
-            <p class="p-value value-s">680</p>
-          </div>
+      <el-col :xs="18" :sm="18" :md="24" :lg="24" :xl="24" class="usersPie">
+        <div class="card-title">
+          <h1>Visitiors who completed a CTA</h1>
         </div>
-        <div class="block-general__cont-wrap">
-          <div class="block-general__cont">
-            <p class="p-col col-2"></p>
-            <p class="par__general">Returning Visitors</p>
-          </div>
-          <div class="block-general__cont align-end">
-            <p class="per-value-b">64%</p>
-            <p class="p-value value-b">1240</p>
-          </div>
+        <pie-chart
+          :data="dataPie"
+          :options="optionsPie"
+          :theme="chartPieTheme1"
+        />
+      </el-col>
+      <div class="block-general__cont-wrap">
+        <div class="block-general__cont">
+          <p class="p-col col-1"></p>
+          <p class="par__general">Returning Visitors</p>
         </div>
+        <div class="block-general__cont align-end">
+          <p class="per-value-b">36%</p>
+          <p class="p-value value-s">680</p>
+        </div>
+      </div>
+      <div class="block-general__cont-wrap">
+        <div class="block-general__cont">
+          <p class="p-col col-2"></p>
+          <p class="par__general">Returning Visitors</p>
+        </div>
+        <div class="block-general__cont align-end">
+          <p class="per-value-b">64%</p>
+          <p class="p-value value-b">1240</p>
+        </div>
+      </div>
     </el-row>
-   
   </div>
 </template>
 <script>
 import { columnChart, pieChart } from "@toast-ui/vue-chart";
 export default {
   components: {
-    "column-chart": columnChart,
     "pie-chart": pieChart
   },
-  data(){
-    return{
+  data() {
+    return {
       chartPieTheme1: {
         series: {
           colors: ["#7480ff", "#69c9d6"]
@@ -82,9 +79,9 @@ export default {
           radiusRange: ["60%", "100%"]
         }
       }
-    }
+    };
   }
-}
+};
 </script>
 <style lang="scss">
 .block-general__cont-wrap {
@@ -127,7 +124,8 @@ export default {
 .value-s {
   color: #7480ff;
 }
-.par__general, .par__large {
+.par__general,
+.par__large {
   margin: 0;
 }
 .par__general {
@@ -148,6 +146,6 @@ export default {
   fill-opacity: 0 !important;
 }
 .usersPie .tui-chart.tui-pie-chart {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 </style>

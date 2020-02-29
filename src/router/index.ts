@@ -42,7 +42,17 @@ const Maintenance = () =>
 const Users = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/Users.vue");
 const ProfileSettings = () =>
-  import(/* webpackChunkName: 'dashboard' */ "@/views/Settings/ProfileSettings.vue");
+  import(
+    /* webpackChunkName: 'dashboard' */ "@/views/Settings/ProfileSettings.vue"
+  );
+const Settings = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Settings/Settings.vue");
+const MyPlan = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Settings/MyPlan.vue");
+const BillingHistory = () =>
+  import(
+    /* webpackChunkName: 'dashboard' */ "@/views/Settings/BillingHistory.vue"
+  );
 Vue.use(Router);
 
 const router = new Router({
@@ -68,7 +78,7 @@ const router = new Router({
         {
           path: "sign-up",
           component: SignUp
-        },    
+        },
         {
           path: "/wizard",
           component: Wizard,
@@ -130,8 +140,22 @@ const router = new Router({
       component: Users
     },
     {
-      path: "/profileSettings",
-      component: ProfileSettings
+      path: "/settings",
+      component: Settings,
+      children: [
+        {
+          path: "profile",
+          component: ProfileSettings
+        },
+        {
+          path: "myplan",
+          component: MyPlan
+        },
+        {
+          path: "billing-history",
+          component: BillingHistory
+        }
+      ]
     },
     {
       path: "*",

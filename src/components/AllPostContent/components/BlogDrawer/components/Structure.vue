@@ -7,7 +7,7 @@
           <p class="detail-item-title">Image</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.image}}</p>
+          <p class="detail-item-data">{{ data.image }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -16,7 +16,7 @@
           <p class="detail-item-title">Text-to-image Ratio</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.texttoimageratio}}</p>
+          <p class="detail-item-data">{{ data.texttoimageratio }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -29,7 +29,7 @@
           <p class="detail-item-title">Call to action</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.calltoaction}}</p>
+          <p class="detail-item-data">{{ data.calltoaction }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -38,7 +38,7 @@
           <p class="detail-item-title">Internal Links</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.internallinks}}</p>
+          <p class="detail-item-data">{{ data.internallinks }}</p>
         </el-col>
       </el-row>
     </el-collapse-item>
@@ -50,7 +50,7 @@
           <p class="detail-item-title">Tone</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.Tone}}</p>
+          <p class="detail-item-data">{{ data.Tone }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -59,7 +59,7 @@
           <p class="detail-item-title">Gender</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.Gender}}</p>
+          <p class="detail-item-data">{{ data.Gender }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -68,7 +68,7 @@
           <p class="detail-item-title">Sentiment</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.Sentiment}}</p>
+          <p class="detail-item-data">{{ data.Sentiment }}</p>
         </el-col>
       </el-row>
     </el-collapse-item>
@@ -80,7 +80,7 @@
           <p class="detail-item-title">Total Paragraphs</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.totalparagraphs}}</p>
+          <p class="detail-item-data">{{ data.totalparagraphs }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -89,7 +89,7 @@
           <p class="detail-item-title">Words Between Images</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.wordsbetweenimage}}</p>
+          <p class="detail-item-data">{{ data.wordsbetweenimage }}</p>
         </el-col>
       </el-row>
     </el-collapse-item>
@@ -101,7 +101,7 @@
           <p class="detail-item-title">Header 1</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.header1}}</p>
+          <p class="detail-item-data">{{ data.header1 }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -110,7 +110,7 @@
           <p class="detail-item-title">Header 2</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.header2}}</p>
+          <p class="detail-item-data">{{ data.header2 }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -119,7 +119,7 @@
           <p class="detail-item-title">Header 3</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.header3}}</p>
+          <p class="detail-item-data">{{ data.header3 }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -128,7 +128,7 @@
           <p class="detail-item-title">Header 4</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.header4}}</p>
+          <p class="detail-item-data">{{ data.header4 }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -137,7 +137,7 @@
           <p class="detail-item-title">Header 5</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.header5}}</p>
+          <p class="detail-item-data">{{ data.header5 }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -146,7 +146,7 @@
           <p class="detail-item-title">Header 6</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.header6}}</p>
+          <p class="detail-item-data">{{ data.header6 }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -155,7 +155,7 @@
           <p class="detail-item-title">Featured Image</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.featuredimage}}</p>
+          <p class="detail-item-data">{{ data.featuredimage }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -164,7 +164,7 @@
           <p class="detail-item-title">Authored Bio</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.Authorbio}}</p>
+          <p class="detail-item-data">{{ data.Authorbio }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -173,7 +173,7 @@
           <p class="detail-item-title">Keywords</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.keywords}}</p>
+          <p class="detail-item-data">{{ data.keywords }}</p>
         </el-col>
       </el-row>
       <el-divider class="detail-divider"></el-divider>
@@ -182,7 +182,7 @@
           <p class="detail-item-title">Meta</p>
         </el-col>
         <el-col>
-          <p class="detail-item-data">{{data.meta}}</p>
+          <p class="detail-item-data">{{ data.meta }}</p>
         </el-col>
       </el-row>
     </el-collapse-item>

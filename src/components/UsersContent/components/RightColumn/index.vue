@@ -6,7 +6,11 @@
           <p class="graph-head__p">Number of visitors by blog</p>
           <p class="graph-head__p"></p>
         </div>
-        <column-chart :data="columnChartData1" :options="options1" :theme="chartTheme1" />
+        <column-chart
+          :data="columnChartData1"
+          :options="options1"
+          :theme="chartTheme1"
+        />
       </el-col>
     </el-row>
     <el-row>
@@ -15,7 +19,11 @@
         <p class="graph-head__p">Average: 20 per visitor</p>
       </div>
       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-        <column-chart :data="columnChartData2" :options="options2" :theme="chartTheme2"/>
+        <column-chart
+          :data="columnChartData2"
+          :options="options2"
+          :theme="chartTheme2"
+        />
       </el-col>
     </el-row>
     <el-row>
@@ -24,11 +32,14 @@
           <p class="graph-head__p">Number of posts viewed per session</p>
           <p class="graph-head__p">Average: 20 per visitor</p>
         </div>
-        <column-chart :data="columnChartData3" :options="options3" :theme="chartTheme3"/>
+        <column-chart
+          :data="columnChartData3"
+          :options="options3"
+          :theme="chartTheme3"
+        />
       </el-col>
     </el-row>
   </div>
-  
 </template>
 
 <script src="https://uicdn.toast.com/tui.chart/latest/tui-chart.min.js"></script>
@@ -73,7 +84,7 @@ export default {
           }
         ]
       },
-      columnChartData2:{
+      columnChartData2: {
         categories: [
           "NOV 15",
           "NOV 16",
@@ -87,22 +98,18 @@ export default {
           {
             name: "Number of posts",
             data: [15, 22, 18, 25, 19, 7, 11]
-            
           },
-           {
+          {
             name: "Number of posts",
             data: [23, 25, 16, 8, 22, 18, 20]
-            
           },
-           {
+          {
             name: "Number of posts",
             data: [20, 18, 25, 18, 9, 24, 17]
-            
           }
-
         ]
       },
-      columnChartData3:{
+      columnChartData3: {
         categories: [
           "NOV 15",
           "NOV 16",
@@ -116,17 +123,14 @@ export default {
           {
             name: "Number of posts",
             data: [15, 22, 18, 25, 19, 7, 11]
-            
           },
-           {
+          {
             name: "Number of posts",
             data: [23, 25, 16, 8, 22, 18, 20]
-            
           },
-           {
+          {
             name: "Number of posts",
             data: [20, 18, 25, 18, 9, 24, 17]
-            
           }
         ]
       },
@@ -149,7 +153,7 @@ export default {
           title: "",
           min: 0,
           max: 500
-        },
+        }
       },
       options2: {
         chart: {
@@ -169,7 +173,7 @@ export default {
           title: "",
           min: 0,
           max: 30
-        },
+        }
       },
       options3: {
         chart: {
@@ -189,21 +193,21 @@ export default {
           title: "",
           min: 0,
           max: 30
-        },
-      },
+        }
+      }
     };
   }
 };
 </script>
 <style lang="scss">
-  .graph-head__title {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 5%;
-  }
-  .graph-head__p {
-    color: #666;
-    margin-top: 5%;
-    margin-bottom: 0;
-  }
+.graph-head__title {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5%;
+}
+.graph-head__p {
+  color: #666;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
 </style>

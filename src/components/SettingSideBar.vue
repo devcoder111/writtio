@@ -34,22 +34,22 @@ export default {
       items: [
         {
           title: "Profeile Settings",
-          route: "/profileSettings",
-          active: "/profileSettings" == this.$route.path,
+          route: "/settings/profile",
+          active: "/settings/profile" == this.$route.path,
           src: require("../assets/icon/asset-profile settings-gray.svg"),
           activesrc: require("../assets/icon/asset-profile settings-purple.svg")
         },
         {
           title: "My Plan",
-          route: "/myplan",
-          active: "/myplan" == this.$route.path,
+          route: "/settings/myplan",
+          active: "/settings/myplan" == this.$route.path,
           src: require("../assets/icon/asset-my plan-gray.svg"),
           activesrc: require("../assets/icon/asset-my plan-pruple.svg")
         },
         {
           title: "Billing History",
-          route: "/billingHistory",
-          active: "/billingHistory" == this.$route.path,
+          route: "/settings/billing-history",
+          active: "/settings/billing-history" == this.$route.path,
           src: require("../assets/icon/asset-billing history-gray.svg"),
           activesrc: require("../assets/icon/asset-billing history-purple.svg")
         }

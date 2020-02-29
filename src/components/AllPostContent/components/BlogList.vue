@@ -1,37 +1,60 @@
 <template>
   <el-row class="list-backgroung" style="margin-top: 10px; display:flex;">
-
-    <img v-if="!blog.publishedflag" :src="require('@/assets/icon/asset-draft.svg')" class="iconSvg" />
-    <img v-else :src="require('@/assets/icon/asset-published.svg')" class="iconSvg" />
+    <img
+      v-if="!blog.publishedflag"
+      :src="require('@/assets/icon/asset-draft.svg')"
+      class="iconSvg"
+    />
+    <img
+      v-else
+      :src="require('@/assets/icon/asset-published.svg')"
+      class="iconSvg"
+    />
     <div class="list-text" style="width: 100%;">
-      <h1>{{blog.Title}}</h1>
-      <p>{{blog.Descripation}}</p>
+      <h1>{{ blog.Title }}</h1>
+      <p>{{ blog.Descripation }}</p>
     </div>
     <div style="display:flex;width: 100%;justify-content: flex-end;">
       <div class="pageviews-box">
         <p class="bar-title">Pageviews</p>
-        <p class="bar-percentage">{{blog.PagViews}}</p>
+        <p class="bar-percentage">{{ blog.PagViews }}</p>
       </div>
       <div class="progressbars">
         <div class="progressbar">
           <p class="bar-title">Opt-in rate</p>
-          <p class="bar-percentage">{{blog.Optinrate}}%</p>
-          <el-progress :percentage="blog.Optinrate" status="exception" :show-text="false"></el-progress>
+          <p class="bar-percentage">{{ blog.Optinrate }}%</p>
+          <el-progress
+            :percentage="blog.Optinrate"
+            status="exception"
+            :show-text="false"
+          ></el-progress>
         </div>
         <div class="progressbar">
           <p class="bar-title">Clickthrough rate</p>
-          <p class="bar-percentage">{{blog.ClicktroughtRate}}%</p>
-          <el-progress :percentage="blog.ClicktroughtRate" status="exception" :show-text="false"></el-progress>
+          <p class="bar-percentage">{{ blog.ClicktroughtRate }}%</p>
+          <el-progress
+            :percentage="blog.ClicktroughtRate"
+            status="exception"
+            :show-text="false"
+          ></el-progress>
         </div>
         <div class="progressbar">
           <p class="bar-title">Read rate</p>
-          <p class="bar-percentage">{{blog.ReadRate}}%</p>
-          <el-progress :percentage="blog.ReadRate" status="warning" :show-text="false"></el-progress>
+          <p class="bar-percentage">{{ blog.ReadRate }}%</p>
+          <el-progress
+            :percentage="blog.ReadRate"
+            status="warning"
+            :show-text="false"
+          ></el-progress>
         </div>
         <div class="progressbar">
           <p class="bar-title">Engagements</p>
-          <p class="bar-percentage">{{blog.Engagement}}%</p>
-          <el-progress :percentage="blog.Engagement" status="success" :show-text="false"></el-progress>
+          <p class="bar-percentage">{{ blog.Engagement }}%</p>
+          <el-progress
+            :percentage="blog.Engagement"
+            status="success"
+            :show-text="false"
+          ></el-progress>
         </div>
       </div>
       <img

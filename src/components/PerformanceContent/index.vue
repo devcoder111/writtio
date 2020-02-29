@@ -6,7 +6,8 @@
           v-for="item in performOptions"
           :key="item.value"
           :label="item.label"
-          :value="item.value">
+          :value="item.value"
+        >
         </el-option>
       </el-select>
       <div class="performance-header-btns">
@@ -17,7 +18,7 @@
     <div class="performance-chart">
       <el-row>
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
-          <line-chart :data="lineChartData" :options="lineChartOption"/>
+          <line-chart :data="lineChartData" :options="lineChartOption" />
         </el-col>
       </el-row>
     </div>
@@ -40,7 +41,10 @@
         <el-col :span="8">
           <el-card shadow="never" class="card-total card-total-last">
             <div class="title">
-              <h2>1 <span style="padding-right: 15px;">hr</span> 45 <span>mins</span></h2>
+              <h2>
+                1 <span style="padding-right: 15px;">hr</span> 45
+                <span>mins</span>
+              </h2>
             </div>
             <p>Average time on page</p>
           </el-card>
@@ -450,23 +454,29 @@ export default {
 
   data() {
     return {
-      performOptions: [{
-          value: 'Option1',
-          label: 'Performance'
-        }, {
-          value: 'Option2',
-          label: 'Option2'
-        }, {
-          value: 'Option3',
-          label: 'Option3'
-        }, {
-          value: 'Option4',
-          label: 'Option4'
-        }, {
-          value: 'Option5',
-          label: 'Option5'
-        }],
-        performValue: '',
+      performOptions: [
+        {
+          value: "Option1",
+          label: "Performance"
+        },
+        {
+          value: "Option2",
+          label: "Option2"
+        },
+        {
+          value: "Option3",
+          label: "Option3"
+        },
+        {
+          value: "Option4",
+          label: "Option4"
+        },
+        {
+          value: "Option5",
+          label: "Option5"
+        }
+      ],
+      performValue: "",
       activeName: "2",
       lineChartData: {
         categories: [
@@ -502,9 +512,8 @@ export default {
           visible: false
         },
         legend: {
-            align: 'top'
-        },
-        
+          align: "top"
+        }
       }
     };
   },
@@ -517,8 +526,8 @@ export default {
 </script>
 
 <style lang="scss">
-.performance-header-btns{
-  float:right;
+.performance-header-btns {
+  float: right;
   .el-button {
     border: unset;
     border-radius: 6px;
@@ -717,7 +726,6 @@ export default {
               .el-tabs__active-bar {
                 display: none;
               }
-              
             }
           }
         }
@@ -795,7 +803,6 @@ export default {
                 background: #f6ff74;
               }
             }
-            
           }
         }
       }

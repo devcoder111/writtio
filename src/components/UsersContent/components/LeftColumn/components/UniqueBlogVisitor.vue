@@ -9,14 +9,16 @@
     <div class="card-btn-action">
       <el-button
         plain
-        v-bind:class="{ 'selected': selected=='7days' }"
-        @click="selected='7days'"
-      >Past 7 Days</el-button>
+        v-bind:class="{ selected: selected == '7days' }"
+        @click="selected = '7days'"
+        >Past 7 Days</el-button
+      >
       <el-button
         plain
-        v-bind:class="{ 'selected': selected=='30days' }"
-        @click="selected='30days'"
-      >Past 30 Days</el-button>
+        v-bind:class="{ selected: selected == '30days' }"
+        @click="selected = '30days'"
+        >Past 30 Days</el-button
+      >
     </div>
   </div>
 </template>

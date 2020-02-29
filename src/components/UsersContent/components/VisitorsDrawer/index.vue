@@ -2,10 +2,14 @@
   <div class="visitor-drawer">
     <div class="visitor-drawer-head">
       <p>
-        Over the last 30 days {{data.visitorid}}
-        <br />viewed 6 post and complated 1 CTA
+        Over the last 30 days {{ data.visitorid }} <br />viewed 6 post and
+        complated 1 CTA
       </p>
-      <el-button icon="el-icon-close" class="close-btn" @click="drawerclose"></el-button>
+      <el-button
+        icon="el-icon-close"
+        class="close-btn"
+        @click="drawerclose"
+      ></el-button>
     </div>
     <Summary :data="data.summary" />
     <list-of-post-viewed :data="data.listofpostviewed" />

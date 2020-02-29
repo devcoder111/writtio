@@ -17,24 +17,44 @@
     </div>
     <!-- <el-switch v-model="softorhard" active-text="Hard" inactive-text="Soft" class="switch-postion"></el-switch> -->
     <el-row>
-      <el-col :xs="12" :sm="12" :md="12" :lg="6" :xl="6" style="background-color: #f8f8f8;">
+      <el-col
+        :xs="12"
+        :sm="12"
+        :md="12"
+        :lg="6"
+        :xl="6"
+        style="background-color: #f8f8f8;"
+      >
         <!-- <pie-chart :chart-data="datacollection3" :options="options3"></pie-chart> -->
         <pie-chart :data="pieChartData" :options="pieChartOption" />
-        
       </el-col>
-      <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" style="background-color: #f8f8f8; margin-left: 80px;">
+      <el-col
+        :xs="12"
+        :sm="12"
+        :md="12"
+        :lg="12"
+        :xl="12"
+        style="background-color: #f8f8f8; margin-left: 80px;"
+      >
         <!-- <bar-chart :chart-data="datacollection1" :options="options1"></bar-chart> -->
-        <column-chart :data="columnChartData" :options="options1"/>
+        <column-chart :data="columnChartData" :options="options1" />
       </el-col>
     </el-row>
-    <blog-list v-for="item in blogdata" :key="item.index" :blog="item" @selectedblog="selectblog" />
-    <el-drawer title="I am the title" :visible.sync="drawer" :with-header="false">
+    <blog-list
+      v-for="item in blogdata"
+      :key="item.index"
+      :blog="item"
+      @selectedblog="selectblog"
+    />
+    <el-drawer
+      title="I am the title"
+      :visible.sync="drawer"
+      :with-header="false"
+    >
       <blog-drawer v-if="drawer" :data="selectedblog" />
     </el-drawer>
   </div>
 </template>
-
-
 
 <script src="https://uicdn.toast.com/tui.chart/latest/tui-chart.min.js"></script>
 <script>
@@ -48,8 +68,8 @@ import BlogDrawer from "./components/BlogDrawer";
 import blogs from "./data.json";
 export default {
   components: {
-    'pie-chart': pieChart,
-    'column-chart': columnChart,
+    "pie-chart": pieChart,
+    "column-chart": columnChart,
     // "bar-chart": BarChart,
     // "bar-chart": barChart,
     // PieChart,
@@ -83,18 +103,18 @@ export default {
         ]
       },
       pieChartOption: {
-         chart: {
-              width: 400,
-              height: 400,
-              title: 'Summary of Engagement',
-              format: '1,000'
-          },
-          chartExportMenu: {
-            visible: false
-          },
+        chart: {
+          width: 400,
+          height: 400,
+          title: "Summary of Engagement",
+          format: "1,000"
+        },
+        chartExportMenu: {
+          visible: false
+        },
         legend: {
-              align: 'right'
-          },
+          align: "right"
+        }
       },
 
       columnChartData: {
@@ -102,41 +122,41 @@ export default {
         categories: ["HIGH", "MEDIUM", "LOW"],
         series: [
           {
-            name: 'opt-in rate',
+            name: "opt-in rate",
             data: [3000, 5000, 7000]
           },
           {
-              name: 'clickthrough rate',
-              data: [1000, 7000, 2000]
+            name: "clickthrough rate",
+            data: [1000, 7000, 2000]
           },
-           {
-              name: 'read rate',
-              data: [1000, 7000, 2000]
+          {
+            name: "read rate",
+            data: [1000, 7000, 2000]
           }
         ]
       },
 
-      options1 : {
-          chart: {
-              width: 1160,
-              height: 400,
-              title: 'Summary of Actions',
-              format: '1,000'
-          },
-          // yAxis: {
-          //     title: 'Amount',
-          //     min: 0,
-          //     max: 9000
-          // },
-          // xAxis: {
-          //     title: 'Month'
-          // },
-          legend: {
-              align: 'top'
-          },
-          chartExportMenu: {
-          visible: false
+      options1: {
+        chart: {
+          width: 1160,
+          height: 400,
+          title: "Summary of Actions",
+          format: "1,000"
         },
+        // yAxis: {
+        //     title: 'Amount',
+        //     min: 0,
+        //     max: 9000
+        // },
+        // xAxis: {
+        //     title: 'Month'
+        // },
+        legend: {
+          align: "top"
+        },
+        chartExportMenu: {
+          visible: false
+        }
       },
       Searchbox: "",
       datacollection1: {},
@@ -147,8 +167,7 @@ export default {
           text: "Summary of Engagement"
         },
         responsive: true
-      },
-     
+      }
     };
   },
   methods: {

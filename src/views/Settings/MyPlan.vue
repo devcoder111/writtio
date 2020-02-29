@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    Profile Settings
+    My Plans
   </el-container>
 </template>
 

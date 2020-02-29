@@ -6,22 +6,22 @@
     <div>
       <el-row class="visitor-detail-item">
         <el-col class="visitor-detail-name">Avarege scroll length</el-col>
-        <el-col class="visitor-detail-data">{{data.scrolllength}}</el-col>
+        <el-col class="visitor-detail-data">{{ data.scrolllength }}</el-col>
       </el-row>
       <el-divider></el-divider>
       <el-row class="visitor-detail-item">
         <el-col class="visitor-detail-name">Read</el-col>
-        <el-col class="visitor-detail-data">{{data.read}}</el-col>
+        <el-col class="visitor-detail-data">{{ data.read }}</el-col>
       </el-row>
       <el-divider></el-divider>
       <el-row class="visitor-detail-item">
         <el-col class="visitor-detail-name">Skimmed</el-col>
-        <el-col class="visitor-detail-data">{{data.skimmed}}</el-col>
+        <el-col class="visitor-detail-data">{{ data.skimmed }}</el-col>
       </el-row>
       <el-divider></el-divider>
       <el-row class="visitor-detail-item">
         <el-col class="visitor-detail-name">Clickthrough rate</el-col>
-        <el-col class="visitor-detail-data">{{data.clickthroughrate}}</el-col>
+        <el-col class="visitor-detail-data">{{ data.clickthroughrate }}</el-col>
       </el-row>
     </div>
   </div>

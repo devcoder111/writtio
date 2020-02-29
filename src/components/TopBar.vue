@@ -7,136 +7,135 @@
   >
     <el-row>
       <el-col class="options" :span="4">
-          <el-menu-item index="1">
-            <!-- <i class="el-icon-document-copy"></i> -->
-            <img src="@/assets/icon/asset-blogs.svg" class="iconSvg" >
-          </el-menu-item>
-          <el-menu-item index="2">
-            <!-- <i class="el-icon-document-add"></i> -->
-            <img src="@/assets/icon/asset-new blog.svg" class="iconSvg">
-          </el-menu-item>
-        
+        <el-menu-item index="1">
+          <!-- <i class="el-icon-document-copy"></i> -->
+          <img src="@/assets/icon/asset-blogs.svg" class="iconSvg" />
+        </el-menu-item>
+        <el-menu-item index="2">
+          <!-- <i class="el-icon-document-add"></i> -->
+          <img src="@/assets/icon/asset-new blog.svg" class="iconSvg" />
+        </el-menu-item>
       </el-col>
       <el-col class="logo-wrapper" :span="15">
-        
-          <img class="logo" src="@/assets/writtio.png" alt />
-
+        <img class="logo" src="@/assets/writtio.png" alt />
       </el-col>
       <el-col class="user-options" :span="3">
-        
-          <el-menu-item index="3">
-            <el-popover
-              class="notification-popover"
-              placement="bottom"
-              width="400"
-              trigger="click"
-              style="padding:0;"
-              >
-              
-              <el-row>
-                <el-col :span="15">
-                  <p class="notification-header">Notifications</p>
-                </el-col>
-                <el-col :span="9">
-                  <el-button id="markallread">Mark as all read</el-button>
-                </el-col>
-              </el-row>
-              <el-divider class="notify-divider"></el-divider>
-              <el-row v-for="(item, index) in notificationData" 
-                      :key="index" class="notificaiotn-itembox"
-                     >
+        <el-menu-item index="3">
+          <el-popover
+            class="notification-popover"
+            placement="bottom"
+            width="400"
+            trigger="click"
+            style="padding:0;"
+          >
+            <el-row>
+              <el-col :span="15">
+                <p class="notification-header">Notifications</p>
+              </el-col>
+              <el-col :span="9">
+                <el-button id="markallread">Mark as all read</el-button>
+              </el-col>
+            </el-row>
+            <el-divider class="notify-divider"></el-divider>
+            <el-row
+              v-for="(item, index) in notificationData"
+              :key="index"
+              class="notificaiotn-itembox"
+            >
+              <div class="notification-box">
+                <p class="notification-title">{{ item.title }}</p>
+                <p class="notification-hours">{{ item.hours }}</p>
+              </div>
+              <el-divider class="notify-divider1"></el-divider>
+            </el-row>
 
-                <div class="notification-box">
-                  <p class="notification-title">{{item.title}}</p>
-                  <p class="notification-hours">{{item.hours}}</p>
-                </div>
-                <el-divider class="notify-divider1"></el-divider>
-              </el-row>
-
-              <el-button  slot="reference" class="bellIcon"><i class="el-icon-message-solid"></i></el-button>
-            </el-popover>
-            
-          </el-menu-item>
-          <el-menu-item index="4">
-            <i class="el-icon-question"></i>
-            <span slot="title">Help</span>
-          </el-menu-item>
-          <el-menu-item index="4">
-              <a href="profileSettings" class="icon-setting">
-                <i class="el-icon-setting"></i>
-                <span slot="title" style="color: #6b6b6b; text-decoration: none;">Settings</span>
-              </a>
-          </el-menu-item>
-        
+            <el-button slot="reference" class="bellIcon"
+              ><i class="el-icon-message-solid"></i
+            ></el-button>
+          </el-popover>
+        </el-menu-item>
+        <el-menu-item index="4">
+          <i class="el-icon-question"></i>
+          <span slot="title">Help</span>
+        </el-menu-item>
+        <el-menu-item index="4">
+          <a href="profileSettings" class="icon-setting">
+            <i class="el-icon-setting"></i>
+            <span slot="title" style="color: #6b6b6b; text-decoration: none;"
+              >Settings</span
+            >
+          </a>
+        </el-menu-item>
       </el-col>
     </el-row>
   </el-menu>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        notificationData: [{
-          title: 'Lorem ipsum dolor sit arnet consectetur adipiscing elit',
-          hours: '32m', 
-        }, 
+export default {
+  data() {
+    return {
+      notificationData: [
         {
-          title: 'Lorem ipsum dolor sit arnet consectetur adipiscing elit',
-          hours: '1h', 
-        }, 
+          title: "Lorem ipsum dolor sit arnet consectetur adipiscing elit",
+          hours: "32m"
+        },
         {
-          title: 'Lorem ipsum dolor sit arnet consectetur adipiscing elit',
-          hours: '2h', 
-        }, 
+          title: "Lorem ipsum dolor sit arnet consectetur adipiscing elit",
+          hours: "1h"
+        },
         {
-          title: 'Lorem ipsum dolor sit arnet consectetur adipiscing elit',
-          hours: '3h', 
-        }]
-      };
-    }
-  };
+          title: "Lorem ipsum dolor sit arnet consectetur adipiscing elit",
+          hours: "2h"
+        },
+        {
+          title: "Lorem ipsum dolor sit arnet consectetur adipiscing elit",
+          hours: "3h"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-.el-row{
+.el-row {
   outline: none;
 }
-.icon-setting{
+.icon-setting {
   text-decoration: none;
 }
-.el-popover{
+.el-popover {
   padding: 0 !important;
 }
-.notificaiotn-itembox:hover{
-  background-color: #F8F8F8;
+.notificaiotn-itembox:hover {
+  background-color: #f8f8f8;
 }
-.notification-header{
-  color:#666666;
+.notification-header {
+  color: #666666;
   font-weight: bold;
-  
 }
-.notification-hours{
+.notification-hours {
   margin-bottom: 12px;
   margin-top: 0;
 }
-.notification-title{
+.notification-title {
   margin-bottom: 0;
-   color:#666666;
+  color: #666666;
   font-weight: bold;
 }
-.notify-divider{
-  margin:0;
+.notify-divider {
+  margin: 0;
 }
-.notify-divider1{
+.notify-divider1 {
   margin-top: 12px;
   margin-bottom: 0;
 }
 .bellIcon {
-  padding:0;
+  padding: 0;
   border: none;
 }
-#markallread{
+#markallread {
   color: #1e90ff;
   float: right;
   border: none;
@@ -153,9 +152,9 @@
       }
     }
   }
-  .iconSvg{
-    width:28px; 
-    height:28px;
+  .iconSvg {
+    width: 28px;
+    height: 28px;
     padding-right: 20px;
   }
   .logo-wrapper {

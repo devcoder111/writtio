@@ -2,7 +2,6 @@
   <div>
     <loading v-if="isLoading" />
     <div v-if="!isLoading">
-      
       <div class="nav-btns">
         <el-button plain type="info">All</el-button>
         <el-button plain type="info">Engagements</el-button>
@@ -10,9 +9,9 @@
         <el-button plain type="info">Draft</el-button>
         <el-button plain type="info">Published</el-button>
       </div>
-      
+
       <br />
-      
+
       <detail-card boxName="Clarity" :data="clarity" />
       <detail-card boxName="Impact" :data="impact" />
       <detail-card boxName="Feel" :data="feel" />
