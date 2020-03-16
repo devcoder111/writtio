@@ -29,8 +29,8 @@ const WizardSuccess = () =>
   import(/* webpackChunkName: 'wizard' */ "@/views/Wizard/Success.vue");
 const WizardError = () =>
   import(/* webpackChunkName: 'wizard' */ "@/views/Wizard/Error.vue");
-const Dashboard = () =>
-  import(/* webpackChunkName: 'dashboard' */ "@/views/Dashboard.vue");
+const Guideline = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Guideline.vue");
 const AllPost = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/AllPost.vue");
 const Writing = () =>
@@ -43,6 +43,14 @@ const Users = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/Users.vue");
 const ProfileSettings = () =>
   import(/* webpackChunkName: 'dashboard' */ "@/views/Settings/ProfileSettings.vue");
+const MyPlan = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Settings/MyPlan.vue");
+const BillingHistory = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Settings/BillingHistory.vue");
+const Topic = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Topic.vue");
+const Dashboard = () =>
+  import(/* webpackChunkName: 'dashboard' */ "@/views/Dashboard.vue");
 Vue.use(Router);
 
 const router = new Router({
@@ -107,7 +115,7 @@ const router = new Router({
     // },
     {
       path: "/guidelines",
-      component: Dashboard
+      component: Guideline
     },
     {
       path: "/allposts",
@@ -130,9 +138,26 @@ const router = new Router({
       component: Users
     },
     {
-      path: "/profileSettings",
+      path: "/settings/profile",
       component: ProfileSettings
     },
+    {
+      path: "/settings/myplan",
+      component: MyPlan
+    },
+    {
+      path: "/settings/billingHistory",
+      component: BillingHistory
+    },
+    {
+      path: "/topics",
+      component: Topic
+    },
+    {
+      path: "/dashboard",
+      component: Dashboard
+    },
+    
     {
       path: "*",
       component: NotFound

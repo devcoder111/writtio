@@ -46,7 +46,7 @@ export default {
           status: "CRITICAL"
         },
         {
-          title: "% of Dificult Words",
+          title: "% of Difficult Words",
           icon: "warning",
           target: 100,
           integer: "00",
@@ -73,7 +73,7 @@ export default {
       ],
       impact: [
         {
-          title: "% Pasive Voice",
+          title: "% Passive Voice",
           icon: "success",
           target: 100,
           integer: "00",
@@ -164,7 +164,7 @@ export default {
           status: "CRITICAL"
         },
         {
-          title: "Dificult Words",
+          title: "Difficult Words",
           icon: "warning",
           target: 100,
           integer: "00",

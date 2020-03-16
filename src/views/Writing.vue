@@ -3,8 +3,8 @@
     <el-header height="70px">
       <TopBar />
     </el-header>
-    <el-container>
-      <el-aside width="auto">
+    <el-container >
+      <el-aside width="auto" class="desktop-only">
         <h5 class="heading-blog">My First Blog</h5>
         <SideBar />
         <div class="upgrade-button">
@@ -12,8 +12,12 @@
           <el-button plain @click="$router.push('maintenance')">UPGRADE</el-button>
         </div>
       </el-aside>
-      <el-main>
+      <SideBar class= "mobile-only" />
+      <el-main class="desktop-only">
         <writing-content />
+      </el-main>
+      <el-main class="mobile-only">
+        <mobile-content />
       </el-main>
     </el-container>
   </el-container>
@@ -23,11 +27,14 @@
 import SideBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar";
 import WritingContent from "@/components/WritingContent";
+import MobileContent from "@/components/MobileContent";
+
 
 export default {
   components: {
     SideBar,
     TopBar,
+    MobileContent,
     WritingContent
   }
 };
@@ -75,5 +82,8 @@ export default {
       border-radius: 5px;
     }
   }
+}
+.main-container {
+  position: relative;
 }
 </style>

@@ -2,7 +2,7 @@
   <div>
     <el-menu
       default-active="2"
-      class="el-menu-vertical-demo"
+      class="el-menu-vertical-demo desktop-only"
       @open="handleOpen"
       @close="handleClose"
       :collapse="isCollapse"
@@ -21,6 +21,32 @@
             <img :src="item.activesrc" class="iconSvg" v-if="item.active" />
 
             <span slot="title">{{ item.title }}</span>
+          </div>
+        </router-link>
+      </el-menu-item>
+    </el-menu>
+    <el-menu
+      default-active="2"
+      class="el-menu-demo mobile-only"
+      mode="horizontal"
+      @open="handleOpen"
+      @close="handleClose"
+      :collapse="isCollapse"
+    >
+      <!-- <p>{{$route.path}}</p> -->
+      <el-menu-item
+        :index="item.route"
+        v-for="(item, index) in items"
+        :key="index"
+        v-bind:class="{ isactive: item.active }"
+        :data-v-step="index"
+      >
+        <router-link :to="item.route">
+          <div style="display:flex;">
+            <img :src="item.src" class="iconSvg" v-if="!item.active" />
+            <img :src="item.activesrc" class="iconSvg" v-if="item.active" />
+
+            <!--<span slot="title">{{ item.title }}</span>-->
           </div>
         </router-link>
       </el-menu-item>
@@ -147,6 +173,19 @@ export default {
     }
 
     // }
+  }
+}
+.el-menu-demo {
+  position:fixed;
+  bottom: 2vw;
+  border-bottom: none;
+  li {
+    width: calc(100vw * 1/6);
+    margin: 0;
+    padding: 0;
+  }
+  li:last-child {
+    display: none;
   }
 }
 </style>

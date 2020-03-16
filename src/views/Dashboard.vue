@@ -4,17 +4,20 @@
       <TopBar />
     </el-header>
     <el-container>
-      <el-aside width="auto">
+      <el-aside width="auto" class="desktop-only">
         <h5 class="heading-blog">My First Blog</h5>
         <SideBar />
         <div class="upgrade-button">
           <p class="free-account">FREE ACCOUNT</p>
           <el-button plain @click="$router.push('maintenance')">UPGRADE</el-button>
-
         </div>
       </el-aside>
-      <el-main>
+      <SideBar class= "mobile-only" />
+      <el-main class="desktop-only">
         <dashboard-content />
+      </el-main>
+      <el-main class="mobile-only">
+        <mobile-content />
       </el-main>
     </el-container>
   </el-container>
@@ -23,13 +26,15 @@
 <script>
 import SideBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar";
-import DashboardContent from "@/components/DashboardContent";
+import DashboardContent from "@/components/DashboardContent/";
+import MobileContent from "@/components/MobileContent";
 
 export default {
   components: {
     SideBar,
     TopBar,
-    DashboardContent
+    DashboardContent,
+    MobileContent
   }
 };
 </script>

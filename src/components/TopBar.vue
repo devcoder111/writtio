@@ -6,7 +6,7 @@
     active-text-color="#6b6b6b"
   >
     <el-row>
-      <el-col class="options" :span="4">
+      <el-col class="options" :span="5">
           <el-menu-item index="1">
             <!-- <i class="el-icon-document-copy"></i> -->
             <img src="@/assets/icon/asset-blogs.svg" class="iconSvg" >
@@ -15,15 +15,15 @@
             <!-- <i class="el-icon-document-add"></i> -->
             <img src="@/assets/icon/asset-new blog.svg" class="iconSvg">
           </el-menu-item>
-        
+
       </el-col>
-      <el-col class="logo-wrapper" :span="15">
-        
+      <el-col class="logo-wrapper" :span="14">
+
           <img class="logo" src="@/assets/writtio.png" alt />
 
       </el-col>
-      <el-col class="user-options" :span="3">
-        
+      <el-col class="user-options" :span="5">
+
           <el-menu-item index="3">
             <el-popover
               class="notification-popover"
@@ -32,7 +32,7 @@
               trigger="click"
               style="padding:0;"
               >
-              
+
               <el-row>
                 <el-col :span="15">
                   <p class="notification-header">Notifications</p>
@@ -42,7 +42,7 @@
                 </el-col>
               </el-row>
               <el-divider class="notify-divider"></el-divider>
-              <el-row v-for="(item, index) in notificationData" 
+              <el-row v-for="(item, index) in notificationData"
                       :key="index" class="notificaiotn-itembox"
                      >
 
@@ -55,19 +55,19 @@
 
               <el-button  slot="reference" class="bellIcon"><i class="el-icon-message-solid"></i></el-button>
             </el-popover>
-            
+
           </el-menu-item>
           <el-menu-item index="4">
             <i class="el-icon-question"></i>
-            <span slot="title">Help</span>
+            <span slot="title" class="desktop-only">Help</span>
           </el-menu-item>
           <el-menu-item index="4">
-              <a href="profileSettings" class="icon-setting">
+              <a href="/settings/profile" class="icon-setting">
                 <i class="el-icon-setting"></i>
-                <span slot="title" style="color: #6b6b6b; text-decoration: none;">Settings</span>
+                <span slot="title" style="color: #6b6b6b; text-decoration: none;" class="desktop-only">Settings</span>
               </a>
           </el-menu-item>
-        
+
       </el-col>
     </el-row>
   </el-menu>
@@ -184,6 +184,7 @@
   }
   .options {
     display: flex;
+    margin: 0;
     .el-menu-item {
       position: relative;
       width: 40%;
@@ -206,6 +207,38 @@
       i {
         font-size: 36px;
       }
+    }
+  }
+  @media (max-width: 479px) {
+    .iconSvg{
+      width:20px;
+      height:20px;
+      padding: 0;
+    }
+    .logo-wrapper {
+      .logo {
+        width: 140px;
+        height: 50px;
+        margin-top: 10px;
+      }
+      width:100%;
+    }
+    .user-options {
+      // padding-right: 2vw;
+      // .el-menu-item {
+      //   padding: 0px;
+      // }
+      display: none;
+    }
+    .options {
+      // .el-menu-item {
+      //   padding: 0;
+      //   &:after {
+      //     width: 1px;
+      //     height: 50%;
+      //   }
+      // }
+      display: none;
     }
   }
 }

@@ -10,7 +10,7 @@
     <div style="display:flex;width: 100%;justify-content: flex-end;">
       <div class="pageviews-box">
         <p class="bar-title">Pageviews</p>
-        <p class="bar-percentage">{{blog.PagViews}}</p>
+        <p class="bar-percentage">{{blog.PageViews}}</p>
       </div>
       <div class="progressbars">
         <div class="progressbar">

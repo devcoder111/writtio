@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-tour name="myTour" :steps="steps" :options="{ highlight: true }">
+    <v-tour name="myTour" :steps="steps" :options="{ highlight: true }" class="desktop-only">
       <template slot-scope="tour">
         <transition
           name="fade"

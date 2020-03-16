@@ -4,8 +4,8 @@
       <TopBar />
     </el-header>
     <el-container class="main-container">
-      <Tour />
-      <el-aside width="auto">
+      <Tour class="desktop-only"/>
+      <el-aside width="auto" class="desktop-only">
         <h5 class="heading-blog">
           My First Blog
         </h5>
@@ -15,8 +15,12 @@
           <el-button plain @click="$router.push('maintenance')">UPGRADE</el-button>
         </div>
       </el-aside>
-      <el-main>
+      <SideBar class= "mobile-only" />
+      <el-main class="desktop-only">
         <all-post-content />
+      </el-main>
+      <el-main class="mobile-only">
+        <mobile-content />
       </el-main>
     </el-container>
   </el-container>
@@ -27,9 +31,11 @@ import Tour from "@/components/Tour";
 import SideBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar";
 import AllPostContent from "@/components/AllPostContent";
+import MobileContent from "@/components/MobileContent";
 
 export default {
   components: {
+    MobileContent,
     Tour,
     SideBar,
     TopBar,

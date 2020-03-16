@@ -14,7 +14,7 @@
         <SettingSideBar />
       </el-aside>
       <el-main>
-        <!-- <writing-content /> -->
+        <Profile />
       </el-main>
     </el-container>
   </el-container>
@@ -23,13 +23,13 @@
 <script>
 import SettingSideBar from "@/components/SettingSideBar";
 import SettingTopBar from "@/components/SettingTopBar";
-import WritingContent from "@/components/WritingContent";
+import Profile from "@/components/SettingContent/Profile";
 
 export default {
   components: {
     SettingSideBar,
     SettingTopBar,
-    WritingContent
+    Profile
   }
 };
 </script>

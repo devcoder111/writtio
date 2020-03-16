@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="top-bar">
-      <el-input
+      <!-- <el-input
         placeholder="Search"
         prefix-icon="el-icon-search"
         v-model="Searchbox"
@@ -13,7 +13,15 @@
         <el-button plain type="info">Actions</el-button>
         <el-button plain type="info">Draft</el-button>
         <el-button plain type="info">Published</el-button>
-      </div>
+      </div> -->
+      <el-select v-model="postTypeValue" @change="sortPost($event)" placeholder="Select">
+        <el-option
+          v-for="item in postTypeOptions"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
     </div>
     <!-- <el-switch v-model="softorhard" active-text="Hard" inactive-text="Soft" class="switch-postion"></el-switch> -->
     <el-row>
@@ -58,10 +66,38 @@ export default {
   },
   mounted() {
     this.fillData();
+
   },
+  
   data() {
     return {
       drawer: false,
+      postTypeOptions: [{
+          value: 'All',
+          label: 'All'
+        }, {
+          value: 'Engagement',
+          label: 'Engagement'
+        }, {
+          value: 'Draft',
+          label: 'Draft'
+        }, {
+          value: 'Published',
+          label: 'Published'
+        }, {
+          value: 'ClickThroughs',
+          label: 'ClickThroughs'
+        },
+        {
+          value: 'Opt-Ins',
+          label: 'Opt-Ins'
+        },
+        {
+          value: 'Pageviews',
+          label: 'Pageviews'
+        }
+        ],
+        postTypeValue: '',
       blogdata: blogs,
       selectedblog: [],
       pieChartData: {
@@ -152,6 +188,41 @@ export default {
     };
   },
   methods: {
+     
+    sortPost(event){
+      console.log('dd', event);
+      
+      switch(event){
+        case "All":
+          this.blogdata.sort(this.date_sort);
+          console.log("today is", new Date().getTime());
+          break;
+        case "Pageviews":
+          this.blogdata.sort((a, b) => parseFloat(a.PageViews) - parseFloat(b.PageViews));
+          break;
+        case "Engagement":
+          this.blogdata.sort((a, b) => parseFloat(a.Engagement) - parseFloat(b.Engagement));
+          break;
+        case "ClickThroughs":
+          this.blogdata.sort((a, b) => parseFloat(a.ClicktroughtRate) - parseFloat(b.ClicktroughtRate));
+          break;
+        case "Opt-Ins":
+          this.blogdata.sort((a, b) => parseFloat(a.Optinrate) - parseFloat(b.Optinrate));
+          break;
+        case "Draft":
+          console.log('dd11', event);
+          this.blogdata.sort((a, b) => b.drafted - a.drafted);
+          break;
+        case "Published":
+          this.blogdata.sort((a, b) => b.publishedflag - a.publishedflag );
+          break;
+      }
+
+    },
+    date_sort(a, b) {
+        return new Date(a.lastUpdated).getTime() - new Date(b.lastUpdated).getTime();
+    },
+ 
     fillData() {
       this.datacollection1 = {
         labels: ["Hign", "Medium", "Low"],
@@ -194,7 +265,8 @@ export default {
       this.selectedblog = item;
       this.drawer = true;
     }
-  }
+  },
+ 
 };
 </script>
 
@@ -225,6 +297,6 @@ export default {
   overflow: auto;
 }
 .el-col-5 {
-  width: fit-content;
+  // width: fit-content;
 }
 </style>

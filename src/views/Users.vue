@@ -4,7 +4,7 @@
       <TopBar />
     </el-header>
     <el-container>
-      <el-aside width="auto">
+      <el-aside width="auto" class="desktop-only">
         <h5 class="heading-blog">My First Blog</h5>
         <SideBar />
         <div class="upgrade-button">
@@ -13,8 +13,12 @@
 
         </div>
       </el-aside>
-      <el-main>
+      <SideBar class= "mobile-only" />
+      <el-main class="desktop-only">
         <users-content />
+      </el-main>
+      <el-main class="mobile-only">
+        <mobile-content />
       </el-main>
     </el-container>
   </el-container>
@@ -24,12 +28,14 @@
 import SideBar from "@/components/SideBar";
 import TopBar from "@/components/TopBar";
 import UsersContent from "@/components/UsersContent/";
+import MobileContent from "@/components/MobileContent";
 
 export default {
   components: {
     SideBar,
     TopBar,
-    UsersContent
+    UsersContent,
+    MobileContent
   }
 };
 </script>
